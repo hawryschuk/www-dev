@@ -73,7 +73,7 @@ jobs:
           path: "hawryschuk.com"
 
       # Conditionally sanitize business/AppModule* to be void of actions():AppModuleAction[] for the main branch
-      - name: Sanitize Business Logic (Production Only)
+      - name: Sanitize Business Logic (Production Only -- Available in www-dev/business-dev.hawryschuk.com )
         if: github.ref_name == 'master'
         run: node hawryschuk.com/frontend2/production-builder/sanitize-business.js
 
